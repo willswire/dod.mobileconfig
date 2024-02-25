@@ -1,5 +1,7 @@
 # dod.mobileconfig
 
+**TL;DR** Download the `dod.mobileconfig` asset from the [latest release page](https://github.com/willswire/dod.mobileconfig/releases/latest), and [install it on your system](https://support.apple.com/guide/mac-help/configuration-profiles-standardize-settings-mh35561/mac#:~:text=Install%20a%20configuration%20profile%20you%27ve%20received&text=Choose%20Apple%20menu%20%3E%20System%20Settings,or%20other%20information%20during%20installation.).
+
 `dod.mobileconfig` is an automated tool designed to simplify the process of trusting Department of Defense (DoD) websites on macOS devices. This tool automatically downloads the latest DoD PKI (Public Key Infrastructure) Certificate Authority (CA) certificates, extracts them, and incorporates them into a `.mobileconfig` file. This file can then be used to easily configure macOS devices to trust all websites with certificates signed by the DoD CA.
 
 ## Features
