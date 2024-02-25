@@ -1,0 +1,39 @@
+name: Update dod.mobileconfig
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-cert:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4
+    - name: Run script to update dod.mobileconfig
+      run: python process_certs.py
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: Release ${{ github.run_number }}
+        draft: false
+        prerelease: false
+    - name: Upload dod.mobileconfig as an artifact
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dod.mobileconfig
+        asset_name: dod.mobileconfig
+        asset_content_type: application/octet-stream

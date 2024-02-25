@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HasRemovalPasscode</key>
+	<false/>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadCertificateFileName</key>
+			<string>dod_pke_chain.cer</string>
+			<key>PayloadContent</key>
+			<data>
+			MIIDczCCAlugAwIBAgIBATANBgkqhkiG9w0BAQsFADBbMQswCQYD
+			VQQGEwJVUzEYMBYGA1UEChMPVS5TLiBHb3Zlcm5tZW50MQwwCgYD
+			VQQLEwNEb0QxDDAKBgNVBAsTA1BLSTEWMBQGA1UEAxMNRG9EIFJv
+			b3QgQ0EgMzAeFw0xMjAzMjAxODQ2NDFaFw0yOTEyMzAxODQ2NDFa
+			MFsxCzAJBgNVBAYTAlVTMRgwFgYDVQQKEw9VLlMuIEdvdmVybm1l
+			bnQxDDAKBgNVBAsTA0RvRDEMMAoGA1UECxMDUEtJMRYwFAYDVQQD
+			Ew1Eb0QgUm9vdCBDQSAzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+			MIIBCgKCAQEAqewUcoroS3Cj2hADhKb7pzYNKjpSFr8wFVKGBUcg
+			z6qmzXXEZG7v8WAjywpmQK60yGgqAFFoSTfpWTJNlbxDJ+lAjToQ
+			zhS8Qxih+d7M54V2c14YGiNbvT8f8u2NGcwD0UCkj6cgAkwnWnk2
+			9qM3IY4AWgYWytNVlm8xKbtyDsviSFHy1DekNdZv7hezsQarCxmG
+			6CNtMRsoeGXF3mJSvMF96+6gXVQE+7LLK7IjVJGCTPC/unRAOwwE
+			RYBnXMXrolfDGn8KLb1/udzBmbDIB+QMhjaUOiUv8n3mlzwblLSX
+			WQbJOuQL2erp/DtzNG/955jk86HCkF8c9T8u1xnTfwIDAQABo0Iw
+			QDAdBgNVHQ4EFgQUbIqUonexgHIdgXoWqvLczmbuRcAwDgYDVR0P
+			AQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL
+			BQADggEBAJ9xpMC2ltKAQ6BI6R92BPnFPK1mGFhjm8O26GiKhVpC
+			ZhK00uaLiH+H9Jj1qMYJyR/wLB/sgrj0pUc4wTMr30x+mr4LC7HL
+			D3xQKBDPio2i6bqshtfUsZNfIo+WBbRODHWRfdPy55TClBR2T48M
+			qxCHWDKFB3WGEgte6lO0CshMhJIf6+hBhjy69E5BStFsWEdBw4Za
+			8u7p8pgnguouNtb4Bl6C8aBSk0QJutKpGVpYo6hdIG1PZPgwhxuQ
+			E0iBzcqQxw3B1Jg/jvIOV2gzEo6ZCbHw5PYQ9DbySb3qozjIVkEj
+			g5rfoRs1fOs/QbP1b0s6Xq5vk3aY0vGZnUXEjnI=
+			</data>
+			<key>PayloadDescription</key>
+			<string>Adds a CA root certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>DoD Root CA 3</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.E151F074-665E-4CE9-9C53-9E0894C65A8C</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>E151F074-665E-4CE9-9C53-9E0894C65A8C</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This profile includes the latest DoD PKI CA Certificates Bundle (PKCS#7) v5.12, which has been updated to include DoD ID/Email CAs 70-73 and DoD SW CAs 74-77.</string>
+	<key>PayloadDisplayName</key>
+	<string>DoD Root Certificate Authority</string>
+	<key>PayloadIdentifier</key>
+	<string>D4B4C973-BED0-4A18-9E89-0314A1CEA8A6</string>
+	<key>PayloadOrganization</key>
+	<string>U.S. Department of Defense</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>50E91582-CF89-4E3E-A7CF-0CF2D7937C46</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
