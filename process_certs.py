@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import zipfile
 import io
 import plistlib
+import base64
 
 def download_zip_file(url):
     response = requests.get(url)
@@ -11,15 +12,22 @@ def download_zip_file(url):
     print("Zip file extracted.")
 
 def modify_mobileconfig(cert_file, mobileconfig_path):
+    # Read the certificate file, skipping the first and last lines
     with open(cert_file, 'r') as file:
-        lines = file.readlines()[1:-1]  # Remove the first and last line
+        lines = file.readlines()[1:-1]  # Remove the BEGIN and END certificate lines
         cert_data = ''.join(lines).replace('\n', '')
 
+    # Convert the certificate data to binary using base64
+    cert_data_bytes = base64.b64decode(cert_data)
+
+    # Read the existing mobileconfig file as a binary plist
     with open(mobileconfig_path, 'rb') as file:
         plist = plistlib.load(file)
 
-    plist['PayloadContent'][0]['PayloadContent'] = cert_data
+    # Replace the PayloadContent data with the new certificate data
+    plist['PayloadContent'][0]['PayloadContent'] = cert_data_bytes  # Assuming 'PayloadContent' is the correct key
 
+    # Write the modified plist back to the mobileconfig file
     with open(mobileconfig_path, 'wb') as file:
         plistlib.dump(plist, file)
 
